@@ -24,7 +24,7 @@ ARCHITECTURE FDregArch OF FDreg IS
 	BEGIN
 		PROCESS(CLK)
 			BEGIN
-				IF RST = '1' THEN
+				IF RISING_EDGE(CLK) AND RST = '1' THEN
 					PCplusOUT    <= (OTHERS => '0');
 					PCcurrentOUT <= (OTHERS => '0');
 					
