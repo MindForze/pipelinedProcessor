@@ -25,4 +25,3 @@ fx: my_adder PORT MAP  (a(i),b(i),
  temp(i-1),add_out(i),temp(i));
 END GENERATE;
 END a_my_nadder;
-
