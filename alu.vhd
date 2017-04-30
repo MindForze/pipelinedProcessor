@@ -155,7 +155,7 @@ Oflag:flags_tmp(3) <= '1' when ( (a(15)='0' and b(15)='0' and tmp_out(15)='1' an
 					   		or (  a(15)='0' and tmp_out(15)='1' and s = "1100") -- a+1
 					  		or (  a(15)='1' and tmp_out(15)='0' and s = "1101") -- a-1
    )	
-else ( flags_tmp(0) xor flags_tmp (2)) when (s="1000"  or s="1001"  or  s="0111" or s="0110") --Shift And Rotate
+
 else '0';
 								
 
