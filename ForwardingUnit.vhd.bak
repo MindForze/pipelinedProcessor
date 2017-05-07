@@ -82,25 +82,6 @@ BEGIN
 			FlushIdEx <= '1';
 			ForwardToId <= '0';
 			RsToId <= "0000000000000000";
-		
-		ELSIF(JmpCallFromId = '1' AND (RdFromWb = RsFromId) AND RegWriteFromMem = '1' AND XToRegFromMem = "01") THEN
-			StallPc <= '0';
-			StallIfId <= '0';
-			FlushIdEx <= '0';
-			ForwardToId <= '1';
-			RsToId <= ALUResFromWb;
-		ELSIF(JmpCallFromId = '1' AND (RdFromWb = RsFromId) AND RegWriteFromMem = '1' AND XToRegFromMem = "10") THEN
-			StallPc <= '0';
-			StallIfId <= '0';
-			FlushIdEx <= '0';
-			ForwardToId <= '1';
-			RsToId <= ImmFromWb;
-		ELSIF(JmpCallFromId = '1' AND (RdFromWb = RsFromId) AND RegWriteFromMem = '1' AND XToRegFromMem = "00") THEN
-			StallPc <= '0';
-			StallIfId <= '0';
-			FlushIdEx <= '0';
-			ForwardToId <= '1';
-			RsToId <= MemDataFromWb;
 
 		ELSIF(NeedRsFromId = '1' AND RdFromEx = RsFromId AND RegWriteFromEx = '1' AND XToRegFromEx = "00") THEN
 			StallPc <= '1';
@@ -122,23 +103,23 @@ BEGIN
 			RsToId <= "0000000000000000"; 
 		END IF;
 
-		--IF(NeedRsFromEx = '1' AND (RdFromMem = RsFromEx) AND RegWriteFromMem = '1' AND XToRegFromEx = "00") THEN --ThisCaseShouldNeverHappenInMemStage
+		--IF(NeedRsFromEx = '1' AND (RdFromMem = RsFromEx) AND RegWriteFromMem = '1' AND XToRegFromMem = "00") THEN --ThisCaseShouldNeverHappenInMemStage
 			--ForwardRsToEx <= '1';
 			--RsToEx <= MemDataFromMem;
-		IF(NeedRsFromEx = '1' AND (RdFromMem = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromEx = "01") THEN
+		IF(NeedRsFromEx = '1' AND (RdFromMem = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromMem = "01") THEN
 			ForwardRsToEx <= '1';
 			RsToEx <= ALUResFromMem;
-		ELSIF(NeedRsFromEx = '1' AND (RdFromMem = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromEx = "10") THEN
+		ELSIF(NeedRsFromEx = '1' AND (RdFromMem = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromMem = "10") THEN
 			ForwardRsToEx <= '1';
 			RsToEx <= ImmFromMem;
 
-		ELSIF(NeedRsFromEx = '1' AND (RdFromWb = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromEx = "00") THEN
+		ELSIF(NeedRsFromEx = '1' AND (RdFromWb = RsFromEx) And RegWriteFromWb = '1' AND XToRegFromWb = "00") THEN
 			ForwardRsToEx <= '1';
 			RsToEx <= MemDataFromWb;
-		ELSIF(NeedRsFromEx = '1' AND (RdFromWb = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromEx = "01") THEN
+		ELSIF(NeedRsFromEx = '1' AND (RdFromWb = RsFromEx) And RegWriteFromWb = '1' AND XToRegFromWb = "01") THEN
 			ForwardRsToEx <= '1';
 			RsToEx <= ALUResFromWb;
-		ELSIF(NeedRsFromEx = '1' AND (RdFromWb = RsFromEx) And RegWriteFromMem = '1' AND XToRegFromEx = "10") THEN
+		ELSIF(NeedRsFromEx = '1' AND (RdFromWb = RsFromEx) And RegWriteFromWb = '1' AND XToRegFromWb = "10") THEN
 			ForwardRsToEx <= '1';
 			RsToEx <= ImmFromWb;
 		ELSE

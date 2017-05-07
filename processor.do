@@ -477,3 +477,63 @@ run
 run
 run
 run
+mem load -filltype value -filldata 1010101100000000 -fillradix symbolic /processor/pm_instMem/MEMORY(0)
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+mem load -filltype value -filldata 1010101100000000 -fillradix symbolic /processor/pm_instMem/MEMORY(1)
+mem load -filltype value -filldata 0001101001101100 -fillradix symbolic /processor/pm_instMem/MEMORY(0)
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

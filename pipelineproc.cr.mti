@@ -24,14 +24,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity dataMem
 -- Compiling architecture dataMemArch of dataMem
 
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/n_bit_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/n_bit_adder.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity my_nadder
--- Compiling architecture a_my_nadder of my_nadder
-
 } {} {}} C:/Ahmed/Arch2nd/VHDfiles/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/PC.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -39,6 +31,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity PC
 -- Compiling architecture a_PC of PC
+
+} {} {}} C:/Ahmed/Arch2nd/VHDfiles/n_bit_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/n_bit_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_nadderx
+-- Compiling architecture a_my_nadder of my_nadderx
 
 } {} {}} C:/Ahmed/Arch2nd/VHDfiles/FlagsReg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/FlagsReg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -48,13 +48,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity FlagsReg
 -- Compiling architecture a_FlagsReg of FlagsReg
 
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/AddOne.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/RegPc.vhd
+} {} {}} C:/Ahmed/Arch2nd/VHDfiles/AddOne.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/AddOne.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity n_reg_pc
--- Compiling architecture A_n_reg_pc of n_reg_pc
+-- Loading package NUMERIC_STD
+-- Compiling entity AddOne
+-- Compiling architecture a_AddOne of AddOne
 
 } {} {}} C:/Ahmed/Arch2nd/VHDfiles/SubOne.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/SubOne.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -105,7 +106,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity OutReg
 -- Compiling architecture a_OutReg of OutReg
 
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/FDregister.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Ahmed\Arch2nd\VHDfiles\FDregister.vhd}
+} {} {}} C:/Ahmed/Arch2nd/VHDfiles/FDregister.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/FDregister.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -154,13 +155,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity alu
 -- Compiling architecture struct of alu
 
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/ForwardingUnit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/ForwardingUnit.vhd
+} {} {}} C:/Ahmed/Arch2nd/VHDfiles/InterruptUnit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/InterruptUnit.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity ForwardingUnit
--- Compiling architecture a_ForwardingUnit of ForwardingUnit
+-- Compiling entity InterruptUnit
+-- Compiling architecture a_InterruptUnit of InterruptUnit
 
 } {} {}} C:/Ahmed/Arch2nd/VHDfiles/my_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/my_adder.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -170,15 +171,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity my_adder
 -- Compiling architecture a_my_adder of my_adder
 
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/InterruptUnit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/InterruptUnit.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity InterruptUnit
--- Compiling architecture a_InterruptUnit of InterruptUnit
-
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/Regfile.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Ahmed\Arch2nd\VHDfiles\Regfile.vhd}
+} {} {}} C:/Ahmed/Arch2nd/VHDfiles/Regfile.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/Regfile.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -202,7 +195,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity BranchUnit
 -- Compiling architecture a_BranchUnit of BranchUnit
 
-} {} {}} C:/Ahmed/Arch2nd/VHDfiles/Processor.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Ahmed\Arch2nd\VHDfiles\Processor.vhd}
+} {} {}} C:/Ahmed/Arch2nd/VHDfiles/Processor.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Ahmed/Arch2nd/VHDfiles/Processor.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO

@@ -26,7 +26,7 @@ ARCHITECTURE a_InterruptUnit of InterruptUnit IS
 
 
 	BEGIN
-	IntInstr <= "11110";
+	IntInstr <= "1111000011000000";
 	Process(Clk, IntRequest, IsPipeLineStalled,
  		Reset, LoadFromID,
  		JmpCallFromID, JmpTypeFromID,

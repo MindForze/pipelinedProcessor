@@ -30,7 +30,7 @@ ARCHITECTURE a_InterruptUnit of InterruptUnit IS
 	Process(Clk, IntRequest, IsPipeLineStalled,
  		Reset, LoadFromID,
  		JmpCallFromID, JmpTypeFromID,
- 		RetFromID, JmpTypeFromEx,
+ 		RetFromID, RtiFromID, JmpTypeFromEx,
  		RetFromEx, RtiFromEx,
  		RetFromMem, RtiFromMem)
 variable InterruptReceived, Interrupted, IntOutInternal: std_logic := '0'; 
