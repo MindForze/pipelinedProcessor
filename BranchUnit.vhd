@@ -22,7 +22,7 @@ End BranchUnit;
 
 Architecture a_BranchUnit of BranchUnit IS
 	BEGIN
-	Process(JmpCallFromID, JmpTypeFromEx, RetFromEx, RtiFromEx, RetFromMem, RtiFromMem, Flags)
+	Process(JmpCallFromID, DestFromID, JmpTypeFromEx, DestFromEx, RetFromEx, RtiFromEx, RetFromMem, RtiFromMem, DestFromMem, Flags)
 	BEGIN
 		IF(RetFromMem = '1' OR RtiFromMem = '1') THEN
 			NewPC <= DestFromMem;

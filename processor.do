@@ -401,3 +401,79 @@ run
 run
 run
 run
+mem load -filltype value -filldata 000 -fillradix symbolic /processor/pm_instMem/MEMORY(3)
+mem load -filltype value -filldata 0 -fillradix symbolic /processor/pm_instMem/MEMORY(2)
+mem load -filltype value -filldata 0 -fillradix symbolic /processor/pm_instMem/MEMORY(1)
+mem load -filltype value -filldata 0 -fillradix symbolic /processor/pm_instMem/MEMORY(0)
+mem load -filltype value -filldata 1010001000000000 -fillradix symbolic /processor/pm_instMem/MEMORY(0)
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+mem load -filltype value -filldata 0001101001001000 -fillradix symbolic /processor/pm_instMem/MEMORY(14)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+mem load -filltype value -filldata 1011100100000000 -fillradix symbolic /processor/pm_instMem/MEMORY(0)
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+force -freeze sim:/processor/Reset 0 0
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+mem load -filltype value -filldata {1011101100000000 } -fillradix symbolic /processor/pm_instMem/MEMORY(0)
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
