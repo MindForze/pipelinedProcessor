@@ -491,24 +491,50 @@ signal IDMux_ForwardOut, IDMux_InOut : std_logic_vector(15 downto 0);
 
 signal ExMux_ForwardDsOut, ExMux_ForwardDtOut, ExMux_ShiftOut : std_logic_vector(15 downto 0);
 
+--MemMux
+
+signal MemMux_AddrOut : std_logic_vector(15 downto 0);
+signal MemMux_DataOut : std_logic_vector(15 downto 0);
+
 --WBMux
 
 signal WBMux_ImmOut, WBMux_AluOut : std_logic_vector(15 downto 0);
 
 --FlagsMux
 
-signal FlagsMux_out : std_logic_vector(3 downto 0);
+signal FlagsMux_out : std_logic_vector(15 downto 0);
 
 --Other
 signal ResetInt : std_logic;
 
 signal InvertedStallPc : std_logic;
 
+signal DEregFlusher : std_logic;
+
+signal EMregFlusher : std_logic;
+
+signal FDregFlusher : std_logic;
+
+signal FDreg_Imm : std_logic_vector(15 downto 0);
+
+signal ShiftVal : std_logic_vector(15 downto 0);
+
+signal aluFlagsToMux : std_logic_vector(15 downto 0);
+
+signal FlagResFlagsToMux : std_logic_vector(15 downto 0);
+
 begin 
 
 ResetInt <= (Rst or Reset);
 InvertedStallPc <= (not ForwardingUnit_StallPc);
+DEregFlusher <= ForwardingUnit_FlushIdEx or DEreg_LDOUT or BranchUnit_FlushEx or Reset;
+EMregFlusher <= Reset or BranchUnit_FlushMem;
+FDregFlusher <= Reset or BranchUnit_FlushId;
+FDreg_Imm <= FDreg_OPcode & FDreg_INSTDATA;
+ShiftVal <= "00000000000" & DEreg_INSTDATAOUT(7 downto 5) & DEreg_INSTDATAOUT(1 downto 0);
 pm_AddOne : AddOne port map (PC_Out, AddOne_result);
+aluFlagsToMux <= "000000000000" & alu_flags_out;
+FlagResFlagsToMux <= "000000000000" & FlagsRegRes_out;
 
 pm_alu : alu port map (ExMux_ForwardDsOut, ExMux_ShiftOut, DEreg_AluOPOUT, alu_result, FlagsReg_out, alu_flags_out);
 
@@ -516,7 +542,7 @@ pm_BranchUnit : BranchUnit port map (ControlUnit_JmpCall, IDMux_InOut, DEreg_JMP
 
 pm_ControlUnit : ControlUnit port map (FDreg_OPcode, ControlUnit_Load, ControlUnit_NeedRs, ControlUnit_NeedRt, ControlUnit_RegWrite, ControlUnit_OutWrite, ControlUnit_XToReg, ControlUnit_AddrSelector, ControlUnit_MemWrite, ControlUnit_XToMem, ControlUnit_JmpType, ControlUnit_JmpCall, ControlUnit_IncSP, ControlUnit_DecSP, ControlUnit_Int, ControlUnit_Rti, ControlUnit_Ret, ControlUnit_FlagsModify, ControlUnit_SetC, ControlUnit_ClrC, ControlUnit_Operation, ControlUnit_Shift, ControlUnit_FromIn);
 
-pm_FlagsReg : FlagsReg port map  ( Clk, Rst, DEreg_FlagModOUT, DEreg_SetCOUT, DEreg_ClrCOUT, FlagsMux_out, FlagsReg_out);
+pm_FlagsReg : FlagsReg port map  ( Clk, Rst, DEreg_FlagModOUT, DEreg_SetCOUT, DEreg_ClrCOUT, FlagsMux_out(3 downto 0), FlagsReg_out);
 
 pm_FlagsRegRes : FlagsRegRes port map  ( Clk, Rst, DEreg_INTOUT, FlagsReg_out, FlagsRegRes_out);
 
@@ -530,10 +556,52 @@ pm_OutReg : OutReg port map ( Clk, Rst, MWreg_OutWROUT, MWreg_ALUResultOUT, OutP
 
 pm_PC : PC port map (Clk, Rst, InvertedStallPc, PCMux_ResetOut, PC_Out);
 
-pm_reg_file : reg_file port map (FDreg_INSTDATA(10 downto 8), FDreg_INSTDATA(7 downto 5), MWreg_RdOUT, ForwardingUnit_StallPc, reg_file_Ds, reg_file_Dt, FDreg_PCcurrentOUT, MWreg_RegWROUT, WBMux_Out, Rst, Clk, ControlUnit_IncSP, DEreg_DecSPOUT);
+pm_reg_file : reg_file port map (FDreg_INSTDATA(10 downto 8), FDreg_INSTDATA(7 downto 5), MWreg_RdOUT, ForwardingUnit_StallPc, reg_file_Ds, reg_file_Dt, FDreg_PCcurrentOUT, MWreg_RegWROUT, WBMux_AluOut, Rst, Clk, ControlUnit_IncSP, DEreg_DecSPOUT);
 
 pm_SubOne : SubOne port map ( PC_Out, SubOne_Out);
 
+pm_MWreg : MWreg port map (Clk, Rst, '1', EMreg_ImmEAOUT, dataMem_DATAOUT, EMreg_ALUREsultOUT, EMreg_RdOUT, EMreg_RegWROUT, EMreg_OutWROUT, EMreg_XtoRegOUT, MWreg_IMMOUT, MWreg_MEMDATAOUT, MWreg_ALUResultOUT, MWreg_RdOUT, MWreg_RegWROUT, MWreg_OutWROUT, MWreg_XtoRegOUT);
+
+pm_DEreg : DEreg port map (Clk, Rst, '1', DEregFlusher, ControlUnit_Ret, ControlUnit_Load, ControlUnit_Int, ControlUnit_Rti, ControlUnit_FlagsModify, ControlUnit_DecSP, IDMux_InOut, reg_file_Dt, ControlUnit_JmpType, FDreg_InstData, FDreg_PCplusOUT, ControlUnit_NeedRs, ControlUnit_NeedRt, ControlUnit_RegWrite, ControlUnit_OutWrite, ControlUnit_XtoReg, ControlUnit_AddrSelector, ControlUnit_MemWrite, ControlUnit_XtoMem , ControlUnit_SetC, ControlUnit_ClrC, ControlUnit_Shift, ControlUnit_Operation, DEreg_RETOUT, DEreg_LDOUT, DEreg_INTOUT, DEreg_RTIOUT, DEreg_FlagModOUT, DEreg_DecSPOUT, DEreg_DSrcOUT, DEreg_DTargetOUT, DEreg_JMPtypOUT, DEreg_INSTDATAOUT, DEreg_PCplusOUT, DEreg_NeedRsOUT, DEreg_NeedRtOUT, DEreg_RegWROUT, DEreg_OutWROUT, DEreg_XtoRegOUT, DEreg_AddRselectOUT, DEreg_MemWROUT, DEreg_XtoMemOUT, DEreg_SetCOUT, DEreg_ClrCOUT, DEreg_ShiftOUT, DEreg_AluOPOUT);
+
+pm_EMreg : EMreg port map (Clk, Rst, '1', EMregFlusher, DEreg_RETOUT, DEreg_RTIOUT, DEreg_INSTDATAOUT(4 downto 2), DEreg_DTargetOUT, DEreg_PCplusOUT, alu_result, FDreg_Imm, '0', DEreg_DecSPOUT, DEreg_RegWROUT, DEreg_OutWROUT, DEreg_XtoRegOUT, DEreg_AddRselectOUT, DEreg_MemWROUT, DEreg_XtoMemOUT, EMreg_RETOUT, EMreg_RTIOUT, EMreg_RdOUT, EMreg_DTargetOUT, EMreg_PCplusOUT, EMreg_ALUResultOUT, EMreg_ImmEAOUT, EMreg_IncSPOUT, EMreg_DecSPOUT, EMreg_RegWROUT, EMreg_OutWROUT, EMreg_XtoRegOUT, EMreg_AddRselectOUT, EMreg_MemWROUT, EMreg_XtoMemOUT); 
+
+pm_FDreg : FDreg port map (Clk, Rst, InvertedStallPc, FDregFlusher, PCMux_PcPlusOut, PCMux_IntInstOut, PC_Out, FDreg_PCplusOUT, FDreg_OPcode, FDreg_INSTDATA, FDreg_PCcurrentOUT);
+
+pm_instMem : instMem port map (Clk, Rst, PC_Out(9 downto 0), instMem_INSTOUT);
+
+pm_dataMem : dataMem port map (Clk, EMreg_MEMWROUT, Rst, MemMux_AddrOut(9 downto 0), MemMux_DataOut, dataMem_M0, dataMem_M1, dataMem_DATAOUT);
+
+pm_PCMux_Jmp : Mux2  port map ( AddOne_result, BranchUnit_NewPC, BranchUnit_ChangePC, PCMux_JmpOut);
+
+pm_PCMux_Int : Mux2 port map (PCMux_JmpOut, dataMem_M1, InterruptUnit_IntOut, PCMux_IntOut);
+
+pm_PCMux_Reset : Mux2 port map (PCMux_IntOut, dataMem_M0, Reset, PCMux_ResetOut);
+
+pm_PCMux_PcPcMinus : Mux2 port map (PC_Out, SubOne_Out, InterruptUnit_PcPcMinus, PCMux_PcPcMinusOut);
+
+pm_PCMux_PcPlus : Mux2 port map (AddOne_result, PCMux_PcPcMinusOut, InterruptUnit_IntOut, PCMux_PcPlusOut);
+
+pm_PCMux_IntInst : Mux2 port map (instMem_INSTOUT, InterruptUnit_IntInstr, InterruptUnit_IntOut, PCMux_IntInstOut);
+
+pm_IDMux_Forward : Mux2 port map (reg_file_Ds, ForwardingUnit_RsToId, ForwardingUnit_ForwardToId, IDMux_ForwardOut);
+
+pm_IDMux_In : Mux2 port map (IDMux_ForwardOut, InReg_out, ControlUnit_FromIn, IDMux_InOut);
+
+pm_ExMux_ForwardDs : Mux2 port map (DEreg_DSrcOUT, ForwardingUnit_RsToEx, ForwardingUnit_ForwardRsToEx, ExMux_ForwardDsOut);
+
+pm_ExMux_ForwardDt : Mux2 port map (DEreg_DTargetOUT, ForwardingUnit_RtToEx, ForwardingUnit_ForwardRtToEx, ExMux_ForwardDtOut);
+
+pm_ExMux_Shift : Mux2 port map (ExMux_ForwardDtOut, ShiftVal, DEreg_ShiftOUT, ExMux_ShiftOut);
+
+pm_MemMux_Addr : Mux2 port map (EMreg_DTargetOUT, EMreg_ImmEAOUT, EMreg_AddRselectOUT, MemMux_AddrOut);
+
+pm_MemMux_Data : Mux2 port map (EMreg_PCplusOUT, EMreg_ALUResultOUT, EMreg_XtoMemOUT, MemMux_DataOut);
+
+pm_WBMux_Imm : Mux2 port map (MWreg_MEMDATAOUT, MWreg_IMMOUT, MWreg_XToRegOUT(1), WBMux_ImmOut);
+
+pm_WBMux_Alu : Mux2 port map (WBMux_ImmOut, MWreg_ALUResultOUT, MWreg_XToRegOUT(0), WBMux_AluOut);
+
+pm_FlagsMux : Mux2 port map (aluFlagsToMux, FlagResFlagsToMux, DEreg_RTIOUT, FlagsMux_Out);
 
 END a_Processor;
-

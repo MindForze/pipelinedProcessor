@@ -34,7 +34,7 @@ port(
     );
 End component;
 
-component my_nadder is
+component my_nadderx is
 GENERIC (n : integer := 16);
 PORT(
     a,b : IN std_logic_vector(n-1  DOWNTO 0);
@@ -80,7 +80,7 @@ else   "0000000000000000";
 
 
 
-incdec :my_nadder port map(outreg6,one,'0',newSp);
+incdec :my_nadderx port map(outreg6,one,'0',newSp);
 
 Reg0 : n_reg port map(WD,outreg0,rst,clk,en_reg0);
 Reg1 : n_reg port map(WD,outreg1,rst,clk,en_reg1);

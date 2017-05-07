@@ -45,27 +45,27 @@ decA:      my_nadder  port map (a,"1111111111111110",'1',y2,cary2);-- a-1
 
 
 	
-logcar: car3 <=flags_in(0);	
+logcar: car3 <=flags_in(2);	
 anding: x3 <= a and b; 
 oring: x4<= a or b;
 --xoring: x5<= a xor b;
 
 SHR1:x8 <= std_logic_vector(shift_right(unsigned(a),to_integer(unsigned(b))));
-SHR2: car8 <= flags_in(0);	
+SHR2: car8 <= flags_in(2);	
 --SHR2:x8(14 downto 0)<=b(15 downto 1);
 --SHR3: car8<= b(0);
 
 
 SHL1: x12 <= std_logic_vector(shift_left(unsigned(a),to_integer(unsigned(b))));
-SHL2: car12 <= flags_in(0);
+SHL2: car12 <= flags_in(2);
 --SHL2: x12(15 downto 1)<=b(14 downto 0);
 --SHL3: car12<= b(15);
 
 RRC1: car10<=a(0);
-RRC2: x10(15)<=flags_in(0);
+RRC2: x10(15)<=flags_in(2);
 RRC3: x10(14 downto 0)<=a(15 downto 1);
 
-RLC1: x14(0)<=flags_in(0);
+RLC1: x14(0)<=flags_in(2);
 RLC2: x14(15 downto 1)<=a(14 downto 0);
 RLC3: car14<=a(15);
 
@@ -115,7 +115,7 @@ else x14 when s="0110"; --RLC
 
 
 
-Cflag: flags_tmp(0)<= car1 when s="0010" --a+b
+Cflag: flags_tmp(2)<= car1 when s="0010" --a+b
 else car2 when s="0011" --a-b
 else car3 when s="0100" or s="0101" or s="1010"--Logic operations
 else car6 when s="1011" -- -a
@@ -138,10 +138,10 @@ else '0';
 
 	
 --Zflag: flags_tmp(1)<= flags_in(1) when s="00001" or s="00010" or s="00011" or s="00000"
-Zflag: flags_tmp(1)<= '1' when tmp_out="0000000000000000"
+Zflag: flags_tmp(0)<= '1' when tmp_out="0000000000000000"
 else '0';
 	
-Nflag: flags_tmp(2) <= tmp_out(15);
+Nflag: flags_tmp(1) <= tmp_out(15);
 	
 --Pflag: flags_tmp(3)<= flags_in(3) when s="00001" or s="00010" or s="00011" or s="00000"
 --else tmp_out (0) xor tmp_out(1)xor tmp_out(2) xor tmp_out(3) xor tmp_out(4) xor tmp_out(5) xor tmp_out(6) xor tmp_out(7) xor tmp_out(8) xor tmp_out(9) xor tmp_out(10) --xor tmp_out(11) xor tmp_out(12) xor tmp_out(13) xor tmp_out(14) xor tmp_out(15);

@@ -17,9 +17,9 @@ ARCHITECTURE a_FlagsReg OF FlagsReg IS
 				ELSIF ((rising_edge(Clk)) and Enable= '1' and ClrC = '0' and SetC = '0') THEN
 					q <= d;
 				ELSIF ((rising_edge(Clk)) and Enable= '1' and ClrC = '1' and SetC = '0') THEN
-					q(0) <= '0';
+					q(2) <= '0';
 				ELSIF ((rising_edge(Clk)) and Enable= '1' and ClrC = '0' and SetC = '1') THEN
-					q(0) <='1';
+					q(2) <='1';
 				END IF;
 		END PROCESS;
 END a_FlagsReg;
