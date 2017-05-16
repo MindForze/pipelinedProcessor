@@ -13,7 +13,7 @@ ENTITY MWreg IS
 		--WB SEGMENT 4 BITS
 		RegWR, OutWR : IN STD_LOGIC;
 		XtoReg : IN STD_LOGIC_VECTOR(1 DOWNTO 0);--2 BITS
-
+		
 		---------------------------------------------------	
 		
 		IMMOUT	     : OUT STD_LOGIC_VECTOR(15 DOWNTO 0); --16 BITS
@@ -29,7 +29,7 @@ END MWreg;
 
 ARCHITECTURE MWregArch OF MWreg IS
 	BEGIN
-		PROCESS(CLK)
+		PROCESS(CLK, RST)
 			BEGIN
 				IF RST = '1' THEN
 					IMMOUT       <= (OTHERS => '0');
@@ -48,13 +48,13 @@ ARCHITECTURE MWregArch OF MWreg IS
 						MEMDATAOUT   <= (OTHERS => '0');
 						ALUResultOUT <= (OTHERS => '0');
 						RdOUT  	     <= (OTHERS => '0');
-						
+		
 						--WB SEGMENT 4 BITS
 						RegWROUT  <= '0';
 						OutWROUT  <= '0';
-						XtoRegOUT <= (OTHERS => '0');			
-		
-					ELSE			
+						XtoRegOUT <= (OTHERS => '0');	
+
+					ELSE	
 						IMMOUT	     <= IMM;
 						MEMDATAOUT   <= MEMDATA;
 						ALUResultOUT <= ALUResult;
@@ -64,9 +64,8 @@ ARCHITECTURE MWregArch OF MWreg IS
 						RegWROUT  <= RegWR;
 						OutWROUT  <= OutWR;
 						XtoRegOUT <= XtoReg;
-
 					END IF;
 				END IF;
 		END PROCESS;
 
-END MWregArch;
+END MWregArch;+

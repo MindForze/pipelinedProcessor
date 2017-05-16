@@ -1,18 +1,18 @@
-{/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/RegSp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/RegSp.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity n_reg_sp
--- Compiling architecture A_n_reg_sp of n_reg_sp
-
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/MWregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/MWregister.vhd}
+{/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/MWregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/MWregister.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity MWreg
 -- Compiling architecture MWregArch of MWreg
+
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/RegSp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/RegSp.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity n_reg_sp
+-- Compiling architecture A_n_reg_sp of n_reg_sp
 
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/ControlUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/ControlUnit.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -55,6 +55,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity my_adder
 -- Compiling architecture a_my_adder of my_adder
 
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/BranchUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/BranchUnit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity BranchUnit
+-- Compiling architecture a_BranchUnit of BranchUnit
+
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Regfile.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Regfile.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -71,14 +79,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity n_reg
 -- Compiling architecture A_n_reg of n_reg
 
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Processor.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Processor
--- Compiling architecture a_Processor of Processor
-
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/my_n_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/my_n_adder.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -86,32 +86,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity my_nadder
 -- Compiling architecture a_my_nadder of my_nadder
-
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/PC.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity PC
--- Compiling architecture a_PC of PC
-
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/AddOne.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/AddOne.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity AddOne
--- Compiling architecture a_AddOne of AddOne
-
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/dataMemory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/dataMemory.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity dataMem
--- Compiling architecture dataMemArch of dataMem
 
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/instructionMemory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/instructionMemory.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -122,6 +96,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity instMem
 -- Compiling architecture instMemArch of instMem
 
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/dataMemory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/dataMemory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity dataMem
+-- Compiling architecture dataMemArch of dataMem
+
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/n_bit_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/n_bit_adder.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -130,6 +113,23 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity my_nadderx
 -- Compiling architecture a_my_nadder of my_nadderx
 
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/AddOne.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/AddOne.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity AddOne
+-- Compiling architecture a_AddOne of AddOne
+
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/PC.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PC
+-- Compiling architecture a_PC of PC
+
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FlagsReg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FlagsReg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -137,6 +137,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity FlagsReg
 -- Compiling architecture a_FlagsReg of FlagsReg
+
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Mux2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Mux2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux2
+-- Compiling architecture a_Mux2 of Mux2
 
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/SubOne.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/SubOne.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -147,13 +155,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity SubOne
 -- Compiling architecture a_SubOne of SubOne
 
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Mux2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/Mux2.vhd}
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/InReg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/InReg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity Mux2
--- Compiling architecture a_Mux2 of Mux2
+-- Compiling entity InReg
+-- Compiling architecture a_InReg of InReg
 
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FlagsRegRes.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FlagsRegRes.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -163,13 +171,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity FlagsRegRes
 -- Compiling architecture a_FlagsRegRes of FlagsRegRes
 
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/InReg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/InReg.vhd}
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/DEregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/DEregister.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity InReg
--- Compiling architecture a_InReg of InReg
+-- Compiling entity DEreg
+-- Compiling architecture DEregArch of DEreg
 
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/OutReg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/OutReg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -179,13 +187,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity OutReg
 -- Compiling architecture a_OutReg of OutReg
 
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/DEregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/DEregister.vhd}
+} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FDregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FDregister.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity DEreg
--- Compiling architecture DEregArch of DEreg
+-- Compiling entity FDreg
+-- Compiling architecture FDregArch of FDreg
 
 } {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/EMregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/EMregister.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -194,13 +202,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity EMreg
 -- Compiling architecture EMregArch of EMreg
-
-} {} {}} {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FDregister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/VHDfiles/FDregister.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity FDreg
--- Compiling architecture FDregArch of FDreg
 
 } {} {}}

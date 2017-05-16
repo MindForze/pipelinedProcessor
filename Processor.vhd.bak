@@ -206,7 +206,7 @@ end component SubOne;
 
 component MWreg IS
 	PORT(
-		CLK, RST, EN : IN STD_LOGIC; 
+		CLK, RST, EN, FLUSH : IN STD_LOGIC; 
 		
 		IMM      : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --16 BITS
 		MEMDATA  : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --16 BITS
@@ -419,7 +419,7 @@ signal InterruptUnit_PcPcMinus, InterruptUnit_FlushExecute, InterruptUnit_IntOut
 
 --OutReg
 
-signal OutReg_Out : std_logic_vector(15 downto 0);
+--signal OutReg_Out : std_logic_vector(15 downto 0); --unused
 
 --PC
 
@@ -527,7 +527,7 @@ begin
 
 ResetInt <= (Rst or Reset);
 InvertedStallPc <= (not ForwardingUnit_StallPc);
-DEregFlusher <= ForwardingUnit_FlushIdEx or DEreg_LDOUT or BranchUnit_FlushEx or Reset;
+DEregFlusher <= ForwardingUnit_FlushIdEx or DEreg_LDOUT or BranchUnit_FlushEx or ControlUnit_FlushExecute or Reset;
 EMregFlusher <= Reset or BranchUnit_FlushMem;
 FDregFlusher <= Reset or BranchUnit_FlushId;
 FDreg_Imm <= FDreg_OPcode & FDreg_INSTDATA;
@@ -560,7 +560,7 @@ pm_reg_file : reg_file port map (FDreg_INSTDATA(10 downto 8), FDreg_INSTDATA(7 d
 
 pm_SubOne : SubOne port map ( PC_Out, SubOne_Out);
 
-pm_MWreg : MWreg port map (Clk, Rst, '1', EMreg_ImmEAOUT, dataMem_DATAOUT, EMreg_ALUREsultOUT, EMreg_RdOUT, EMreg_RegWROUT, EMreg_OutWROUT, EMreg_XtoRegOUT, MWreg_IMMOUT, MWreg_MEMDATAOUT, MWreg_ALUResultOUT, MWreg_RdOUT, MWreg_RegWROUT, MWreg_OutWROUT, MWreg_XtoRegOUT);
+pm_MWreg : MWreg port map (Clk, Rst, '1', Reset, EMreg_ImmEAOUT, dataMem_DATAOUT, EMreg_ALUREsultOUT, EMreg_RdOUT, EMreg_RegWROUT, EMreg_OutWROUT, EMreg_XtoRegOUT, MWreg_IMMOUT, MWreg_MEMDATAOUT, MWreg_ALUResultOUT, MWreg_RdOUT, MWreg_RegWROUT, MWreg_OutWROUT, MWreg_XtoRegOUT);
 
 pm_DEreg : DEreg port map (Clk, Rst, '1', DEregFlusher, ControlUnit_Ret, ControlUnit_Load, ControlUnit_Int, ControlUnit_Rti, ControlUnit_FlagsModify, ControlUnit_DecSP, IDMux_InOut, reg_file_Dt, ControlUnit_JmpType, FDreg_InstData, FDreg_PCplusOUT, ControlUnit_NeedRs, ControlUnit_NeedRt, ControlUnit_RegWrite, ControlUnit_OutWrite, ControlUnit_XtoReg, ControlUnit_AddrSelector, ControlUnit_MemWrite, ControlUnit_XtoMem , ControlUnit_SetC, ControlUnit_ClrC, ControlUnit_Shift, ControlUnit_Operation, DEreg_RETOUT, DEreg_LDOUT, DEreg_INTOUT, DEreg_RTIOUT, DEreg_FlagModOUT, DEreg_DecSPOUT, DEreg_DSrcOUT, DEreg_DTargetOUT, DEreg_JMPtypOUT, DEreg_INSTDATAOUT, DEreg_PCplusOUT, DEreg_NeedRsOUT, DEreg_NeedRtOUT, DEreg_RegWROUT, DEreg_OutWROUT, DEreg_XtoRegOUT, DEreg_AddRselectOUT, DEreg_MemWROUT, DEreg_XtoMemOUT, DEreg_SetCOUT, DEreg_ClrCOUT, DEreg_ShiftOUT, DEreg_AluOPOUT);
 
