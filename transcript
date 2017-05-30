@@ -1,0 +1,645 @@
+# Loading project PipelineProc
+so processor.do
+# ambiguous command name "so": socket source source_examine_popup source_highlight_errors
+do processor.do
+# vsim work.processor 
+# Start time: 19:18:24 on May 15,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.processor(a_processor)
+# Loading ieee.numeric_std(body)
+# Loading work.addone(a_addone)
+# Loading work.alu(struct)
+# Loading work.my_nadder(a_my_nadder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.branchunit(a_branchunit)
+# Loading work.controlunit(a_controlunit)
+# Loading work.flagsreg(a_flagsreg)
+# Loading work.flagsregres(a_flagsregres)
+# Loading work.forwardingunit(a_forwardingunit)
+# Loading work.inreg(a_inreg)
+# Loading work.interruptunit(a_interruptunit)
+# Loading work.outreg(a_outreg)
+# Loading work.pc(a_pc)
+# Loading work.reg_file(a_file_reg)
+# Loading work.my_nadderx(a_my_nadder)
+# Loading work.n_reg(a_n_reg)
+# Loading work.n_reg_sp(a_n_reg_sp)
+# Loading work.subone(a_subone)
+# Loading work.mwreg(mwregarch)
+# Loading work.dereg(deregarch)
+# Loading work.emreg(emregarch)
+# Loading work.fdreg(fdregarch)
+# Loading work.instmem(instmemarch)
+# Loading work.datamem(datamemarch)
+# Loading work.mux2(a_mux2)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_instMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_alu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_alu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /processor/pm_alu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /processor/pm_alu
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Jmp_Testim.mem} /processor/pm_instMem/MEMORY
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Testcase1_Codeim.mem} /processor/pm_instMem/MEMORY
+mem load -filltype value -filldata 0 -fillradix symbolic -skip 0 /processor/pm_instMem/MEMORY
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Testcase1_Codeim.mem} /processor/pm_instMem/MEMORY
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/InPort 1000000000000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 04:16:28 on May 16,2017, Elapsed time: 8:58:04
+# Errors: 0, Warnings: 9
+# Compile of FlagsReg.vhd was successful.
+# Compile of FlagsRegRes.vhd was successful.
+# Compile of InReg.vhd was successful.
+# Compile of OutReg.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of ControlUnit.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of my_adder.vhd was successful.
+# Compile of my_n_adder.vhd was successful.
+# Compile of InterruptUnit.vhd was successful.
+# Compile of AddOne.vhd was successful.
+# Compile of SubOne.vhd was successful.
+# Compile of Mux2.vhd was successful.
+# Compile of n_bit_adder.vhd was successful.
+# Compile of Reg.vhd was successful.
+# Compile of Regfile.vhd was successful.
+# Compile of BranchUnit.vhd was successful.
+# Compile of ForwardingUnit.vhd was successful.
+# Compile of DEregister.vhd was successful.
+# Compile of EMregister.vhd was successful.
+# Compile of FDregister.vhd was successful.
+# Compile of MWregister.vhd was successful.
+# Compile of RegSp.vhd was successful.
+# Compile of dataMemory.vhd was successful.
+# Compile of instructionMemory.vhd was successful.
+# Compile of Processor.vhd was successful.
+# 26 compiles, 0 failed with no errors.
+do processor.do
+# vsim work.processor 
+# Start time: 04:16:43 on May 16,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.processor(a_processor)
+# Loading ieee.numeric_std(body)
+# Loading work.addone(a_addone)
+# Loading work.alu(struct)
+# Loading work.my_nadder(a_my_nadder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.branchunit(a_branchunit)
+# Loading work.controlunit(a_controlunit)
+# Loading work.flagsreg(a_flagsreg)
+# Loading work.flagsregres(a_flagsregres)
+# Loading work.forwardingunit(a_forwardingunit)
+# Loading work.inreg(a_inreg)
+# Loading work.interruptunit(a_interruptunit)
+# Loading work.outreg(a_outreg)
+# Loading work.pc(a_pc)
+# Loading work.reg_file(a_file_reg)
+# Loading work.my_nadderx(a_my_nadder)
+# Loading work.n_reg(a_n_reg)
+# Loading work.n_reg_sp(a_n_reg_sp)
+# Loading work.subone(a_subone)
+# Loading work.mwreg(mwregarch)
+# Loading work.dereg(deregarch)
+# Loading work.emreg(emregarch)
+# Loading work.fdreg(fdregarch)
+# Loading work.instmem(instmemarch)
+# Loading work.datamem(datamemarch)
+# Loading work.mux2(a_mux2)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_instMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_alu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /processor/pm_alu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /processor/pm_dataMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /processor/pm_alu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /processor/pm_alu
+force -freeze sim:/processor/Reset 1 0
+run
+mem load -filltype value -filldata 0 -fillradix symbolic -skip 0 /processor/pm_instMem/MEMORY
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code1im.mem} /processor/pm_instMem/MEMORY
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code2im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code3im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code4im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+noforce sim:/processor/Reset
+force -freeze sim:/processor/Reset 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code5im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+mem load -filltype value -filldata 0 -fillradix symbolic -skip 0 /processor/pm_instMem/MEMORY
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code5im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code6im.mem} /processor/pm_instMem/MEMORY
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+mem load -filltype value -filldata 0 -fillradix symbolic -skip 0 /processor/pm_instMem/MEMORY
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code7im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Reset 1 0
+run
+force -freeze sim:/processor/Reset 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code8im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Rst 1 0
+run
+force -freeze sim:/processor/Rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Rst 1 0
+run
+force -freeze sim:/processor/Rst 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code8im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Rst 1 0
+run
+force -freeze sim:/processor/Rst 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code7im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Rst 1 0
+run
+force -freeze sim:/processor/Rst 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code9im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/processor/Rst 1 0
+run
+force -freeze sim:/processor/Rst 0 0
+mem load -i {/home/ahmed/College/3rd Year/Second Term/Arch/MyThings/Arch2nd/Assembler/Code10im.mem} /processor/pm_instMem/MEMORY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
